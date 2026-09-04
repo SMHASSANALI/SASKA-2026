@@ -6,11 +6,12 @@
   --font-display: "Archivo", "Inter", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
 
-  /* Brand system — cool graphite ground with a warm brass accent, kept apart
+  /* Brand system — cool graphite ground with a warm amber accent, kept apart
      on purpose (see design notes) rather than the cyan/black or purple looks
      used previously. */
-  --color-primary: #d99a3a;
-  --color-primary-light: #e6b465;
+  --color-primary: #efa53b;
+  --color-primary-light: #f5bd63;
+  --color-primary-ink: #1a1200;
   --color-secondary: #3f8f82;
   --color-dark: #12151b;
   --color-surface: #1b2029;

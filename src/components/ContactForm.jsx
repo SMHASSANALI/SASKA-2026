@@ -161,7 +161,7 @@ const ContactForm = () => {
           <div className="flex justify-end pt-2">
             <button
               disabled={loading}
-              className="flex items-center gap-3 rounded-xl bg-primary text-black font-semibold px-6 py-3 disabled:opacity-60"
+              className="flex items-center gap-3 rounded-xl bg-primary text-primary-ink font-semibold px-6 py-3 disabled:opacity-60"
             >
               Submit
               <FaArrowRight size={16} />

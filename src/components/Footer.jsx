@@ -37,7 +37,7 @@ const SimpleFooter = () => {
                 href="https://www.instagram.com/saskasolutions/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-primary/60 text-primary p-2 hover:bg-primary hover:text-black transition-colors"
+                className="rounded-full border border-primary/60 text-primary p-2 hover:bg-primary hover:text-primary-ink transition-colors"
               >
                 <FaInstagram size={18} />
               </a>
@@ -45,7 +45,7 @@ const SimpleFooter = () => {
                 href="https://www.facebook.com/SaskaSolutions/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-primary/60 text-primary p-2 hover:bg-primary hover:text-black transition-colors"
+                className="rounded-full border border-primary/60 text-primary p-2 hover:bg-primary hover:text-primary-ink transition-colors"
               >
                 <FaFacebookF size={18} />
               </a>
@@ -53,7 +53,7 @@ const SimpleFooter = () => {
                 href="https://www.linkedin.com/company/saska-solutions"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full border border-primary/60 text-primary p-2 hover:bg-primary hover:text-black transition-colors"
+                className="rounded-full border border-primary/60 text-primary p-2 hover:bg-primary hover:text-primary-ink transition-colors"
               >
                 <FaLinkedinIn size={18} />
               </a>

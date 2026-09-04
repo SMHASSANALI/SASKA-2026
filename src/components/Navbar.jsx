@@ -40,7 +40,7 @@ const Navbar = () => {
                 <p
                   className={`text-sm font-medium px-4 py-1.5 rounded-full transition-colors ${
                     isActive
-                      ? "bg-primary text-black"
+                      ? "bg-primary text-primary-ink"
                       : "text-white/70 hover:text-white"
                   }`}
                 >
@@ -64,7 +64,7 @@ const Navbar = () => {
           href="mailto:info@saskasolutions.com"
           className="hidden md:flex flex-row gap-2 items-center justify-center shrink-0 pl-3 border-l border-white/10"
         >
-          <div className="size-[34px] rounded-full flex items-center justify-center bg-primary text-black">
+          <div className="size-[34px] rounded-full flex items-center justify-center bg-primary text-primary-ink">
             <TbMail size={18} />
           </div>
           <div className="space-y-0 leading-tight">

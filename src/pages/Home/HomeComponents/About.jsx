@@ -100,7 +100,7 @@ const About = () => {
             key={index}
             className="flex flex-row items-center gap-3 rounded-xl border border-white/10 px-4 py-3"
           >
-            <span className="size-[30px] shrink-0 flex items-center justify-center rounded-full bg-primary-light text-black">
+            <span className="size-[30px] shrink-0 flex items-center justify-center rounded-full bg-primary-light text-primary-ink">
               <TbArrowRight size={18} />
             </span>
             <h3 className="text-sm font-semibold uppercase text-white">
