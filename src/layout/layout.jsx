@@ -46,6 +46,25 @@ const Layout = () => {
     window.lenis?.scrollTo(0, { immediate: true }) || window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  // GA4's own gtag("config", ...) call in index.html only fires once, on
+  // initial load — this is a client-routed SPA, so every navigation after
+  // that is invisible to Analytics unless we send a page_view ourselves.
+  // Skip the very first render so we don't double-count the load gtag
+  // already recorded.
+  const isFirstRender = useRef(true);
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    if (typeof window.gtag !== "function") return;
+    window.gtag("event", "page_view", {
+      page_path: location.pathname + location.search,
+      page_title: document.title,
+      page_location: window.location.href,
+    });
+  }, [location.pathname, location.search]);
+
   return (
     <div className="bg-zinc-950">
       <div className="sticky top-0 z-[999]">
