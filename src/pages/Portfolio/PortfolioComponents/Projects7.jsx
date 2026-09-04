@@ -24,7 +24,7 @@ const Projects7 = () => {
         <div className="w-full lg:w-7/12 relative">
           <motion.img
             src={laptop}
-            alt="Fusion Fillings Screenshot"
+            alt="Tapease Screenshot"
             className="w-full h-auto object-cover shadow-lg"
             initial={{ opacity: 1, scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
@@ -77,10 +77,30 @@ const Projects7 = () => {
             animate={isInView ? "visible" : "hidden"}
             custom={4}
           >
-            We designed Tapease, creating a clean, intuitive interface that
-            brings clarity and efficiency to their operations. Now, admins and
-            drivers can navigate the system easily, see everything in one place,
-            and make decisions faster.
+            We built Tapease as a full ERP with PayFac API integration,
+            replacing manual payment and transaction handling with automated,
+            streamlined workflows. Analytics, push notifications, and a
+            user-friendly interface give admins and drivers everything they
+            need in one place.
+          </motion.p>
+          <motion.h3
+            className="text-xl md:text-2xl font-bold text-white"
+            variants={textVariant}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            custom={5}
+          >
+            Result
+          </motion.h3>
+          <motion.p
+            className="text-sm md:text-base text-gray-200 font-medium tracking-tight"
+            variants={textVariant}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            custom={6}
+          >
+            90+ new users onboarded in the first month alone, with adoption
+            still growing.
           </motion.p>
           <motion.a
             href="https://www.tapease.com.au/"
@@ -89,7 +109,7 @@ const Projects7 = () => {
             variants={textVariant}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            custom={5}
+            custom={7}
           >
             Visit Site
           </motion.a>

@@ -64,6 +64,25 @@ const Projects6 = () => {
           >
             We built a performance-optimized, SEO-focused website with a simplified Menu page to reduce ordering friction, improve customer experience, and boost local brand recognition.
           </motion.p>
+          <motion.h3
+            className="text-xl md:text-2xl font-bold text-white"
+            variants={textVariant}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            custom={5}
+          >
+            Result
+          </motion.h3>
+          <motion.p
+            className="text-sm md:text-base text-gray-200 font-medium tracking-tight"
+            variants={textVariant}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            custom={6}
+          >
+            Fusion Fillings now has real brand presence — 40% of their sales
+            are generated directly through their website.
+          </motion.p>
           <motion.a
             href="https://www.fusionfillings.com/"
             target="_blank"
@@ -71,7 +90,7 @@ const Projects6 = () => {
             variants={textVariant}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            custom={5}
+            custom={7}
           >
             Visit Site
           </motion.a>
