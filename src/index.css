@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-display: "Archivo", "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Brand system — cool graphite ground with a warm brass accent, kept apart
+     on purpose (see design notes) rather than the cyan/black or purple looks
+     used previously. */
+  --color-primary: #d99a3a;
+  --color-primary-light: #e6b465;
+  --color-secondary: #3f8f82;
+  --color-dark: #12151b;
+  --color-surface: #1b2029;
+  --color-ink: #eceef0;
+  --color-muted: #8a93a3;
+}
+
+:root {
+  --default-font-family: var(--font-inter) !important;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+/* anti aliasing and smooth */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
