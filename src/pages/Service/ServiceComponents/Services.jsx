@@ -155,7 +155,7 @@ const Services = () => {
         </div>
         <motion.div
           ref={ref}
-          className="w-full grid md:grid-cols-3 justify-center items-center gap-[20px] h-full pt-[60px] border-white "
+          className="w-full grid md:grid-cols-2 justify-center items-stretch gap-[20px] h-full pt-[60px] border-white "
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}

@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import Card from "./Card";
 import BorderButton from "../../../components/BorderButton";
 import backend from "../../../assets/svg/backend.svg";
 import software from "../../../assets/svg/software.svg";
@@ -12,141 +11,105 @@ const ManagedITTeaser = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const navigate = useNavigate();
 
-  const containerVariants = {
-    hidden: { opacity: 1 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 },
+  const services = [
+    {
+      icon: backend,
+      title: "Systems Administration",
+      description:
+        "Day‑to‑day management, monitoring, patching, backups, and compliance.",
+      cta: "Learn More",
+      scrollTo: "systems-administration",
     },
-  };
+    {
+      icon: frontend,
+      title: "Cloud Managed Services",
+      description:
+        "Azure migrations, AVD, cost management, and hybrid cloud integration.",
+      cta: "Explore Cloud",
+      scrollTo: "cloud-managed-services",
+    },
+    {
+      icon: software,
+      title: "Cybersecurity Services",
+      description: "EDR, audits, penetration tests, DLP, and phishing training.",
+      cta: "Increase Security",
+      scrollTo: "cybersecurity",
+    },
+    {
+      icon: frontend,
+      title: "Desktop Support Excellence",
+      description:
+        "Fast resolutions, user education, and proactive maintenance.",
+      cta: "Get Support",
+      scrollTo: "desktop-support",
+    },
+  ];
 
-  const cardVariants = {
-    hidden: { opacity: 1, x: -100 },
+  const nodeVariants = {
+    hidden: { opacity: 1, y: 24 },
     visible: {
       opacity: 1,
-      x: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
     },
   };
 
   return (
-    <main className="w-full relative px-[20px] pt-[20px] md:pt-[40px] text-white">
+    <main className="w-full relative px-[20px] pt-[20px] md:pt-[40px] pb-[40px] text-white overflow-hidden">
       <div className="mx-auto max-w-[1600px]">
-        <div className="w-full flex flex-col gap-[36px] md:gap-[48px]">
-          <h2 className="text-3xl md:text-4xl font-light text-center">
-            Managed IT Services
+        <div className="flex flex-col gap-[16px] mb-[56px]">
+          <p className="font-mono text-xs tracking-[0.2em] uppercase text-primary">
+            Managed IT
+          </p>
+          <h2 className="text-3xl md:text-4xl font-light max-w-xl">
+            Proactive, secure,
             <br />
-            <span className="font-bold">Proactive, secure, and scalable</span>
+            <span className="font-bold">and scalable IT operations</span>
           </h2>
-          <p className="text-center max-w-3xl mx-auto text-sm md:text-base opacity-80">
+          <p className="max-w-2xl text-sm md:text-base text-muted">
             Reduce downtime and costs with proactive monitoring, cloud
             management, strong security, and responsive desktop support.
           </p>
-          <motion.div
-            ref={ref}
-            className="flex flex-col flex-wrap md:flex-row gap-[56px] justify-center items-center mx-auto mt-[10px] z-50"
-            variants={containerVariants}
-            initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
-            viewport={{ once: true }}
-          >
-            <motion.div variants={cardVariants}>
-              <Card icon={backend}>
-                <div className="flex flex-col gap-[30px]">
-                  <div className="flex flex-col gap-[20px]">
-                    <h3 className="font-semibold text-xl text-primary">
-                      Systems Administration
-                    </h3>
-                    <p className="text-[16px] font-light leading-[1.2rem]">
-                      Day‑to‑day management, monitoring, patching, backups, and
-                      compliance.
-                    </p>
-                  </div>
-                  <BorderButton
-                    onClick={() =>
-                      navigate("/services", {
-                        state: { scrollTo: "systems-administration" },
-                      })
-                    }
-                    text={"Learn More"}
-                  />
-                </div>
-              </Card>
-            </motion.div>
-
-            <motion.div variants={cardVariants}>
-              <Card icon={frontend}>
-                <div className="flex flex-col gap-[30px]">
-                  <div className="flex flex-col gap-[20px]">
-                    <h3 className="font-semibold text-xl text-primary">
-                      Cloud Managed Services
-                    </h3>
-                    <p className="text-[16px] font-light leading-[1.2rem]">
-                      Azure migrations, AVD, cost management, and hybrid cloud
-                      integration.
-                    </p>
-                  </div>
-                  <BorderButton
-                    onClick={() =>
-                      navigate("/services", {
-                        state: { scrollTo: "cloud-managed-services" },
-                      })
-                    }
-                    text={"Explore Cloud"}
-                  />
-                </div>
-              </Card>
-            </motion.div>
-
-            <motion.div variants={cardVariants}>
-              <Card icon={software}>
-                <div className="flex flex-col gap-[30px]">
-                  <div className="flex flex-col gap-[20px]">
-                    <h3 className="font-semibold text-xl text-primary">
-                      Cybersecurity Services
-                    </h3>
-                    <p className="text-[16px] font-light leading-[1.2rem]">
-                      EDR, audits, penetration tests, DLP, and phishing
-                      training.
-                    </p>
-                  </div>
-                  <BorderButton
-                    onClick={() =>
-                      navigate("/services", {
-                        state: { scrollTo: "cybersecurity" },
-                      })
-                    }
-                    text={"Increase Security"}
-                  />
-                </div>
-              </Card>
-            </motion.div>
-
-            <motion.div variants={cardVariants}>
-              <Card icon={frontend}>
-                <div className="flex flex-col gap-[30px]">
-                  <div className="flex flex-col gap-[20px]">
-                    <h3 className="font-semibold text-xl text-primary">
-                      Desktop Support Excellence
-                    </h3>
-                    <p className="text-[16px] font-light leading-[1.2rem]">
-                      Fast resolutions, user education, and proactive
-                      maintenance.
-                    </p>
-                  </div>
-                  <BorderButton
-                    onClick={() =>
-                      navigate("/services", {
-                        state: { scrollTo: "desktop-support" },
-                      })
-                    }
-                    text={"Get Support"}
-                  />
-                </div>
-              </Card>
-            </motion.div>
-          </motion.div>
         </div>
+
+        {/* Connected pipeline — four nodes on a single spine instead of a card grid */}
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          className="relative"
+        >
+          <div className="hidden md:block absolute top-[24px] left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/40 to-transparent" />
+          <div className="grid md:grid-cols-4 gap-[32px] md:gap-[20px]">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                variants={nodeVariants}
+                className="relative flex flex-col gap-[16px]"
+              >
+                <div className="relative z-10 size-[48px] rounded-full bg-dark border-2 border-primary flex items-center justify-center">
+                  <img src={service.icon} alt="" className="w-5 h-5 invert" />
+                </div>
+                <h3 className="font-semibold text-lg text-primary">
+                  {service.title}
+                </h3>
+                <p className="text-sm font-light text-muted leading-[1.3rem]">
+                  {service.description}
+                </p>
+                <div className="mt-auto pt-[8px]">
+                  <BorderButton
+                    onClick={() =>
+                      navigate("/services", {
+                        state: { scrollTo: service.scrollTo },
+                      })
+                    }
+                    text={service.cta}
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </main>
   );

@@ -72,7 +72,7 @@ const ManagedIT = () => {
         </h3>
         <motion.div
           ref={ref}
-          className="w-full grid md:grid-cols-3 justify-start items-start gap-[20px] h-full pt-[60px] "
+          className="w-full grid md:grid-cols-2 justify-start items-stretch gap-[20px] h-full pt-[60px] "
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
